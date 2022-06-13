@@ -1,0 +1,18 @@
+.credibilidade{
+    background: #282D39;
+    height: 480px;
+    padding: 53px 0 0;
+
+    @include media-breakpoint-up(lg){
+        display: flex;
+        align-items: center;
+        height: 300px;
+        padding: 0;
+    }
+
+    h1{
+        font-size: 28px;
+        font-weight: 400;
+        color: #fff;
+    }
+}

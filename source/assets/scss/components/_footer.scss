@@ -1,0 +1,17 @@
+.footer{
+    padding: 30px 0 100px;
+    color: #707070;
+
+    @include media-breakpoint-up(lg){
+        padding: 40px 0;
+    }
+
+    &-texto{
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+    &-logoid360{
+        text-align: center;
+    }
+}

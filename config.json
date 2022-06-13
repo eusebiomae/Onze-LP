@@ -1,0 +1,43 @@
+{ 
+    "nome": "Nome",
+    "title": "Studios Não Resideciais à venda | Onze Vla Clementino",
+    "description": "Preencha o formulário e receba as novidades em primeira mão! Plantas de 22 m² a 48 m². Clique e saiba mais.",
+    "GA": "",
+    "facebook": "",
+    "hubid": "d3d9446802463",
+    "telefone": "(11) 9999-9999",
+    "galerias": [
+        {
+            "size_thumb": {"w": 830, "h": 530},
+            "size_thumb_mob": {"w": 480, "h": 320},
+            "path": "images/apto/",
+            "legendas": [
+                "Imagem 1",
+                "Imagem 2",
+                "Imagem 3",
+                "Imagem 4"
+            ]
+        },
+        {
+            "size_thumb": {"w": 830, "h": 530},
+            "size_thumb_mob": {"w": 480, "h": 320},
+            "path": "images/lazer/",
+            "legendas": [
+                "Imagem 1",
+                "Imagem 2",
+                "Imagem 3",
+                "Imagem 4"
+            ]
+        },
+        {
+            "size_thumb": {"w": 600,"h": 0},
+            "size_thumb_mob": {"w": 480,"h": 0},
+            "path": "images/plantas/",
+            "legendas": [
+                "Planta 25 m²",
+                "Planta 30 m²",
+                "Planta 40 m²"
+            ]
+        }
+    ]
+}
