@@ -291,6 +291,42 @@ figure{
 
 }
 
+//MODAL BOOTSTRAP
+.modal-dialog{
+    max-width: 735px;    
+    
+    .modal-content{
+        @include media-breakpoint-up(lg){
+            padding: 20px 50px;
+        }        
+    }
+
+    .modal-header{
+        border: none;
+
+        .modal-title{
+            font-size: 25px;
+            color: #4A5777;
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
+
+        button{
+            span{
+                font-size: 45px;
+                font-weight: lighter;
+            }
+        }
+    }
+
+    .modal-body{
+        p{
+            font-size: 18px;
+            letter-spacing: 0.72px;
+        }
+    }
+}
+
 
 @keyframes rotateLoad{
     from { transform: rotate(0deg); }

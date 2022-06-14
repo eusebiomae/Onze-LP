@@ -168,6 +168,14 @@
         }
 
         .form{
+            --bg-contato: #fff;
+            --msg-load-color-1: #A25F3433;
+            --msg-load-color-2: #A25F3480;
+            --msg-btn-bg: #A25F34;
+            --msg-btn-color: #fff;
+
+            position: relative;
+            
             &-group{
                 margin: 0 0 10px;
             }
@@ -189,6 +197,18 @@
                         text-decoration: underline;
                     }
                 }
+
+                .form-check-input{
+                    border-radius: 0;
+                    background-color: transparent;
+
+                    &:checked{
+                        background-color: #A25F34;
+                        border-color: #A25F34;
+                        box-shadow: none;
+                        outline: none;
+                    }
+                }
             }
 
             .btn-form{
@@ -205,6 +225,78 @@
                 letter-spacing: 0.3px;
                 border-radius: 10px;
             }
+
+            .box-mensagem{
+                background: var(--bg-contato);
+                height: calc(100% + 20px);
+                width: calc(100% + 20px);
+                align-items: center;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                left: - 10px;
+                top: -10px;
+                position: absolute;
+                transition: all .2s ease-in-out;
+                opacity: 0;
+                visibility: hidden;
+            
+                &-ativo{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            
+                &-load{
+                    --load-color: #000;
+            
+                    font-size: 15px;
+                    text-align: center;
+            
+                    &::before{
+                        animation: rotateLoad .4s linear infinite;
+                        border: 3px solid var(--msg-load-color-1);
+                        border-bottom: 3px solid var(--msg-load-color-2);
+                        border-radius: 50%;
+                        content: "";
+                        height: 40px;
+                        width: 40px;
+                    }
+            
+                    &::after{
+                        content: 'enviando...';
+                        display: block;
+                        padding-top: 15px;
+                        text-align: center;
+                        width: 100%;
+                    }
+                }
+            
+                &-ok{
+                    padding: 20px;
+                    text-align: center;
+                }
+                
+                &-tit{
+                    display: block;
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+                
+                &-texto{
+                    display: block;
+                    padding: 20px 0;
+                    font-size: 14px;
+            
+                }
+            
+                .btn{
+                    padding: 8px 20px;
+                    border: none;
+                    background: var(--msg-btn-bg);
+                    color:  var(--msg-btn-color);
+                }
+            }
         }
+
     }
 }
