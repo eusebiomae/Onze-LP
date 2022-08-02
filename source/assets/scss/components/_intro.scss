@@ -1,302 +1,37 @@
 .intro{
-    padding: 0;
+    padding: 70px 0 0;
+    position: relative;
+    height: 80vh;
+    color: #fff;
 
-    &-content{
-        @include media-breakpoint-up(lg){
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .container{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-flow: column;
+        gap: 20px;
+        position: relative;
+        z-index: 2;
+        height: 100%;
     }
 
-    &-infos{
+    &-img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
 
-        @include media-breakpoint-up(lg){
-            width: calc(50% + 100px);
-            border-right: 10px solid #A25F34;
+        picture{
+            display: block;
+            height: 100%;
         }
 
-        .logo-metragem{
-            padding: 0 0 10px;
-            .container{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-
-                @include media-breakpoint-up(lg){
-                    flex-direction: row;
-                }
-            }
-            .logo{
-                img{
-                    width: 168px;
-                    height: 161px;
-                    object-fit: cover;
-
-                    @include media-breakpoint-up(lg){
-                        width: 212px;
-                        height: 203px;
-                        margin: 0 20px 0 0;
-                    }
-                }
-            }
-
-            p{
-                font-size: 25px;
-                letter-spacing: 1.25px;
-                
-                @include media-breakpoint-up(lg){
-                    font-size: 30px;
-                }
-            }
-
+        img{
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
         }
-
-        .infos{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            height: 207px;
-            border-top: 3px solid #A25F34;
-            border-bottom: 3px solid #A25F34;
-
-            @include media-breakpoint-up(lg){
-                background: #282D39;
-                border-top: 10px solid #A25F34;
-                border-bottom: 10px solid #A25F34;
-                height: 170px;
-            }
-
-            &::before{
-                content: "";
-                width: 100%;
-                height: 100%;
-                background: url(../images/intro-mobile.jpg);
-                background-size: cover;
-                background-repeat: no-repeat;
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                @include media-breakpoint-up(lg){
-                    display: none;
-                }
-            }
-
-            &::after{
-                content: "";
-                width: 100%;
-                height: 100%;
-                background: #282D39;
-                opacity: 0.87;
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                @include media-breakpoint-up(lg){
-                    display: none;
-                }
-            }
-
-            .container{
-                position: relative;
-                z-index: 1;
-                text-align: center;
-
-                @include media-breakpoint-up(lg){
-                    text-align: left;
-                    max-width: 520px;
-                }
-            }
-
-            p{
-                font-size: 25px;
-                letter-spacing: 1.25px;
-                color: #fff;
-                line-height: 1.1;
-
-                @include media-breakpoint-up(lg){
-                    font-size: 30px;
-                }
-            }
-
-            span{
-                color: #fff;
-                font-size: 12px;
-            }
-        }
-
-        .imagem{
-            display: none;
-            
-            @include media-breakpoint-up(lg){
-                display: initial;
-                width: 100%;
-                height: 266px;
-            }
-
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-    }
-
-    &-contato{
-        padding: 20px 0;
-
-        @include media-breakpoint-up(lg){
-            width: 50%;
-        }
-
-        .container{
-            @include media-breakpoint-up(lg){
-                max-width: 480px;
-                padding: 0;
-            }
-        }
-
-        h2{
-            font-size: 20px;
-            color: #1E3746;
-            margin: 0 0 17px;
-            line-height: 1;
-            font-weight: bold;
-        }
-
-        .form{
-            --bg-contato: #fff;
-            --msg-load-color-1: #A25F3433;
-            --msg-load-color-2: #A25F3480;
-            --msg-btn-bg: #A25F34;
-            --msg-btn-color: #fff;
-
-            position: relative;
-            
-            &-group{
-                margin: 0 0 10px;
-            }
-
-            &-control, &-select{
-                border-radius: 5px;
-                border: 2px solid #282D39;
-            }
-
-            &-check{
-                margin: 10px 0 15px;
-                label{
-                    font-size: 14px;
-                    color: #4A5777;
-                    
-                    a{
-                        color: #4A5777;
-                        font-weight: bold;
-                        text-decoration: underline;
-                    }
-                }
-
-                .form-check-input{
-                    border-radius: 0;
-                    background-color: transparent;
-
-                    &:checked{
-                        background-color: #A25F34;
-                        border-color: #A25F34;
-                        box-shadow: none;
-                        outline: none;
-                    }
-                }
-            }
-
-            .btn-form{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                height: 46px;
-                background: #A25F34;
-                color: #fff;
-                font-weight: bold;
-                text-transform: uppercase;
-                font-size: 15px;
-                letter-spacing: 0.3px;
-                border-radius: 10px;
-            }
-
-            .box-mensagem{
-                background: var(--bg-contato);
-                height: calc(100% + 20px);
-                width: calc(100% + 20px);
-                align-items: center;
-                display: flex;
-                flex-flow: column;
-                justify-content: center;
-                left: - 10px;
-                top: -10px;
-                position: absolute;
-                transition: all .2s ease-in-out;
-                opacity: 0;
-                visibility: hidden;
-            
-                &-ativo{
-                    opacity: 1;
-                    visibility: visible;
-                }
-            
-                &-load{
-                    --load-color: #000;
-            
-                    font-size: 15px;
-                    text-align: center;
-            
-                    &::before{
-                        animation: rotateLoad .4s linear infinite;
-                        border: 3px solid var(--msg-load-color-1);
-                        border-bottom: 3px solid var(--msg-load-color-2);
-                        border-radius: 50%;
-                        content: "";
-                        height: 40px;
-                        width: 40px;
-                    }
-            
-                    &::after{
-                        content: 'enviando...';
-                        display: block;
-                        padding-top: 15px;
-                        text-align: center;
-                        width: 100%;
-                    }
-                }
-            
-                &-ok{
-                    padding: 20px;
-                    text-align: center;
-                }
-                
-                &-tit{
-                    display: block;
-                    font-size: 18px;
-                    font-weight: bold;
-                }
-                
-                &-texto{
-                    display: block;
-                    padding: 20px 0;
-                    font-size: 14px;
-            
-                }
-            
-                .btn{
-                    padding: 8px 20px;
-                    border: none;
-                    background: var(--msg-btn-bg);
-                    color:  var(--msg-btn-color);
-                }
-            }
-        }
-
     }
 }

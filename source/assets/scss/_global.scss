@@ -5,21 +5,6 @@ section{
     padding: 30px 0;
 }
 
-br{
-    &.mob{
-        @include media-breakpoint-up(lg){
-            display: none;
-        }
-    }
-
-    &.desk{
-        display: none;
-        @include media-breakpoint-up(lg){
-            display: block;
-        }
-    }
-}
-
 button{
     border: none;
     background: none;
@@ -291,68 +276,8 @@ figure{
 
 }
 
-//MODAL BOOTSTRAP
-.modal-dialog{
-    max-width: 735px;    
-    
-    .modal-content{
-        @include media-breakpoint-up(lg){
-            padding: 20px 50px;
-        }        
-    }
-
-    .modal-header{
-        border: none;
-
-        .modal-title{
-            font-size: 25px;
-            color: #4A5777;
-            letter-spacing: 1px;
-            font-weight: 400;
-        }
-
-        button{
-            span{
-                font-size: 45px;
-                font-weight: lighter;
-            }
-        }
-    }
-
-    .modal-body{
-        p{
-            font-size: 18px;
-            letter-spacing: 0.72px;
-        }
-    }
-}
-
 
 @keyframes rotateLoad{
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
 }
-
-// EFEITO LUPA 
-.img-magnifier-container {
-    position: relative;
-    .img-magnifier-glass {
-        position: absolute;
-        z-index: 3;
-        border: 1px solid #243441;
-        border-radius: 50%;
-        cursor: none;      
-        width: 250px;
-        height: 250px;
-        opacity:0;
-        pointer-events:none;
-        z-index: 1;
-    }
-    &:hover{
-        .img-magnifier-glass{
-            opacity:1;
-            pointer-events:initial;
-
-        }
-    }
-  }

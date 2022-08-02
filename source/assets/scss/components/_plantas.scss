@@ -1,0 +1,28 @@
+.plantas{
+
+    &-item{
+        padding: 15px 0;
+
+        @include media-breakpoint-up(lg){
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 50px;
+            background: #e8e8e8;
+            margin-top: 20px;
+        }
+        
+        figcaption{
+            display: none;
+        }
+
+        img{
+            width: 100%;
+        }
+        
+    }
+
+    &-infos{
+        font-size: 30px;
+    }
+}

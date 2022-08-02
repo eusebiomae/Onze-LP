@@ -15,7 +15,7 @@ mix
     .js('source/assets/js/main.js', 'js')
     .sass('source/assets/scss/styles.scss', 'css')
     .copyWatched('source/assets/images/**/*.{jpg,svg,png,gif}', 'public/images', { base: 'images' })
-    .copyWatched(['source/assets/icomoon/fonts', 'source/assets/fonts'], 'public/fonts')
+    .copy(['source/assets/icomoon/fonts', 'source/assets/fonts'], 'public/fonts')
     .disableNotifications()
     ;
 

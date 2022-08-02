@@ -14,14 +14,17 @@
 @import "photoswipe/src/css/main"; 
 @import "photoswipe/src/css/default-skin/default-skin";
 
-//TYPEKIT
-@import url("https://use.typekit.net/hmb2hbn.css");
-//font-family:"futura-pt"; font-weight do 400 ao 700
 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+@import 'components/header';
 @import 'components/intro';
-@import 'components/destaque';
-@import 'components/nomah';
-@import 'components/credibilidade';
+@import 'components/plantas';
 @import 'components/localizacao';
+@import 'components/video';
+@import 'components/tour';
+@import 'components/contato';
 @import 'components/realizacao';
+@import 'components/conversao';
+@import 'components/modal';
 @import 'components/footer';

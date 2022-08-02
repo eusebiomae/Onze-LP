@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="<%=description%>">
     <title><%=title%></title>
-    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="shortcut icon" href="images/favicon.svg">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://use.typekit.net/hmb2hbn.css">
 
     <% if (GA != '') { %>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -41,145 +40,35 @@
     <!-- End Facebook Pixel Code -->
     <% } %>
 </head>
-<body>    
-    <main>    
-        <section class="intro">
-            <div class="intro-content">
-                <div class="intro-infos">
+<body>
 
-                    <div class="logo-metragem">
-                        <div class="container">
-                            <div class="logo">
-                                <img src="images/logo-onze.png" alt="">
-                            </div>
-                            <p>Studios de <strong>22 m²</strong>  a <strong>48 m²</strong></p>
-                        </div>
-                    </div>
-
-                    <div class="infos">
-                        <div class="container">
-                            <p>Invista emStudios* <br class="mob"> <strong>no coração <br> da Vila Clementino</strong></p>
-                            <span>* Studio não residencial.</span>
-                        </div>
-                    </div>
-
-                    <div class="imagem">
-                        <img src="images/intro-desk.jpg" alt="">
-                    </div>
-                </div>
-                
-                <div class="intro-contato">
-                    <div class="container">
-
-                        <h2><strong>Preencha o cadastro e receba mais informações sobre as unidades NR do Onze Vila Clementino.</strong></h2>
-
-                        <%
-                        form_nome = 'formEmail';
-                        form_prefixo = 'FE';
-                        form_tipo = 'Email';
-                        form_canal = 'mensagem';
-                        form_btn = 'Enviar Mensagem';
-                        %>
+    <% include components/header %>
     
-                        <% include components/form %>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <main>
 
-        <section class="destaque">
-            <div class="container">
-                <h1>SEGURANÇA, <br class="mob"> SOLIDEZ, <br class="mob"> RENTABILIDADE <br class="mob"> E MUITA PRATICIDADE</h1>
-            </div>
-        </section>
+        <a href="">
+            <span>Aguarde</span>
+            <i></i>
+        </a>
 
-        <section class="nomah">
-            <div class="container">
-                <div class="nomah-logo">
-                    <p>Parceria com a</p>
-                    <img src="images/logo-nomah.png" alt="">
-                </div>
-
-                <h1>FACILIDADE NA GESTÃO DO SEU ATIVO IMOBILIÁRIO, PARA VOCÊ NÃO TER QUE SE PREOCUPAR COM NADA.</h1>
-            </div>
-        </section>
-
-        <section class="credibilidade">
-            <div class="container">
-                <h1>A CREDIBILIDADE E SOLIDEZ DE QUEM É ESPECIALISTA <br class="desk"> EM EMPREENDIMENTOS DE PADRÃO ELEVADO, <br class="desk"> NOS BAIRROS MAIS VALORIZADOS DE SÃO PAULO.</h1>
-            </div>
-        </section>
-
-        <section class="localizacao">
-            <div class="localizacao-mapa img-magnifier-container">
-
-                <span class="mob">deslize o mapa para ver mais <span class="icon-arrow-down"></span></span>
-                <img id="mag" src="images/mapa2.png"  class="img-fluid" alt="">      
-                <span class="desk">passe o mouse na imagem para ver detalhes <span class="icon-search"></span></span>
-
-            </div>
-        </section>
-
-        <section class="realizacao">
-            <div class="container">
-                <div class="realizacao-logos">
-                    <div class="bloco">
-                        <p>Realização e Construção:</p>
-                        <div class="logo">
-                            <img src="images/logo-ryazbek.png" alt="">
-                        </div>
-                    </div>
-                    <div class="bloco">
-                        <p>Realização</p>
-                        <div class="logo">
-                            <img src="images/logo-rofer.png" alt="">
-                        </div>
-                    </div>
-                    <div class="bloco">
-                        <p>Intermediação:</p>
-                        <div class="logo custom">
-                            <img src="images/logo-abyara.png" alt="">
-                            <img src="images/logo-occa3.png" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <% include components/intro %>
+        <% include components/localizacao %>
+        <% include components/lazer %>
+        <% include components/apartamento %>
+        <% include components/plantas %>
+        <% include components/video %>
+        <% include components/tour %>       
+        <% include components/contato %>
+        <% include components/realizacao %>
+        
     </main>
 
-    <% include components/footer %>
-
-    <div class="modal fade" id="politicaModal" tabindex="-1" aria-labelledby="politicaModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="politicaModalLabel">Termo de Consentimento</h5>
-                    <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p><strong>Estou ciente e de acordo</strong> em disponibilizar meus dados pessoais para obtenção de informações sobre o empreendimento Onze Vila Clementino e de que os dados coletados poderão ser compartilhados com as empresas parceiras listadas neste site, doravante denominadas somente como “Parceiras”, para fins promocionais, publicitários e estatísticos relacionados à comercialização de imóveis.</p>
-                    <p><strong>Autorizo que a RYPE SPE 15 - EMPREENDIMENTO IMOBILIÁRIO LTDA e/ou suas Parceiras, como definido anteriormente, utilizem os meus dados pessoais para a finalidade exclusiva de utilização dos dados para a oferta deste e de outros empreendimentos e venda de imóveis.</strong></p>
-                    <p><strong>Estou ciente</strong> de que este consentimento serve para atendimento aos requisitos da Lei nº 13.709/18 (Lei Geral de Proteção de Dados) e, a qualquer momento, poderei revogá-lo, devendo comunicar a decisão pelo e-mail <a href="mailto:dtmmkt@ryazbek.com.br">dtmmkt@ryazbek.com.br</a>.</p>
-                </div>
-                <!-- <div class="modal-footer">    
-                    <button type="button" class="btn-form" data-bs-dismiss="modal">
-                        <span class="txt">Fechar </span>                    
-                        <span class="icon-check icon-hover"></span>
-                    </button>
-                </div> -->
-            </div>
-        </div>
-    </div>  
-    
-    
-    <!--  
     <% include components/conversao %>
     <% include components/modal_email %>
     <% include components/modal_chat %>
     <% include components/modal_whatsapp %>
-    -->
+    <% include components/footer %>
+   
     <script src="js/main.js"></script>
     <script src="https://script.hubid360.com.br/js?id=<%=hubid%>" async></script>
 </body>
