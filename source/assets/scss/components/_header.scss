@@ -104,18 +104,16 @@
     }
 
     &-destaque{
-        --bg-destaque: #444;
-
+        background-color: #243441;
         display: inline-flex;
         align-items: center;
         position: relative;
         padding: 15px 20px;
         font-size: 18px;
-        background: var(--bg-destaque);
         color: #fff;
         
         @include media-breakpoint-up(lg){
-            padding: 0 2px 0 20px;
+            // padding: 0 2px 0 20px;
             line-height: var(--header-height);
             height: var(--header-height);
             font-size: 16px;

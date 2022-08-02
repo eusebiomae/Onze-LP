@@ -2,11 +2,12 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff2?7r4fs3') format('woff2'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?7r4fs3') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?7r4fs3') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?7r4fs3##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?k7th42');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?k7th42#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff2?k7th42') format('woff2'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?k7th42') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?k7th42') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?k7th42##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,31 +28,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-tel {
-  &:before {
-    content: $icon-tel; 
-  }
-}
-.icon-chat {
-  &:before {
-    content: $icon-chat; 
-  }
-}
-.icon-mail {
-  &:before {
-    content: $icon-mail; 
-  }
-}
-.icon-camera {
-  &:before {
-    content: $icon-camera; 
-  }
-}
-.icon-down {
-  &:before {
-    content: $icon-down; 
-  }
-}
 .icon-prev {
   &:before {
     content: $icon-prev; 
@@ -62,19 +38,49 @@
     content: $icon-next; 
   }
 }
-.icon-close {
+.icon-seta01 {
   &:before {
-    content: $icon-close; 
+    content: $icon-seta01; 
   }
 }
-.icon-whatsapp {
+.icon-chat {
   &:before {
-    content: $icon-whatsapp; 
+    content: $icon-chat; 
   }
 }
-.icon-play {
+.icon-concierge {
   &:before {
-    content: $icon-play; 
+    content: $icon-concierge; 
+  }
+}
+.icon-coworking {
+  &:before {
+    content: $icon-coworking; 
+  }
+}
+.icon-mail {
+  &:before {
+    content: $icon-mail; 
+  }
+}
+.icon-fitness {
+  &:before {
+    content: $icon-fitness; 
+  }
+}
+.icon-lavanderia {
+  &:before {
+    content: $icon-lavanderia; 
+  }
+}
+.icon-lupa {
+  &:before {
+    content: $icon-lupa; 
+  }
+}
+.icon-mensagem {
+  &:before {
+    content: $icon-mensagem; 
   }
 }
 

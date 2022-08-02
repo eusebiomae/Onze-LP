@@ -1,0 +1,13 @@
+.sobre{
+    padding: 70px 0 0;
+    position: relative;
+    color: #fff;
+    
+    h1, p {
+        color: #A56135;
+    }
+
+    &-logos {
+        display: inline-flex;
+    }
+}

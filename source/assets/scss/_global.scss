@@ -35,13 +35,14 @@ figure{
     height: 50px;
     min-width: 200px;
     font-size: 18px;
-    background: $primary;
+    background: #243441;
     color: #fff;
     transition: all .2s ease-in-out;
 
     &:hover{
-        background: shift-color($primary, 20%);
-        color: #fff;
+        background: none;
+        border: solid 1px #1B3241;
+        color: #1B3241;
     }
 }
 
@@ -280,4 +281,20 @@ figure{
 @keyframes rotateLoad{
     from { transform: rotate(0deg); }
     to { transform: rotate(360deg); }
+}
+
+//Quebra de linha para Desktop e Mobile
+br{
+    &.desk{
+        display: none;
+        @include media-breakpoint-up(lg){
+            display: block;
+        }
+    }
+
+    &.mob{
+        @include media-breakpoint-up(lg){
+            display: none;
+        }
+    }
 }

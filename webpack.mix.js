@@ -40,7 +40,7 @@ if (prod) {
             fs.rmdir('./public/views', err => { if (err) return; });
         });
 } else {
-    //mix.sourceMaps().webpackConfig({ devtool: 'source-map' });
+    mix.sourceMaps().webpackConfig({ devtool: 'source-map' });
 }
 
 
