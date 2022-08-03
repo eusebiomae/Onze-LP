@@ -3,6 +3,14 @@
 
 @import "bs-config";
 
+// FONT EXTERNA
+@font-face {
+    font-family:"futura-pt";
+    src:url("https://use.typekit.net/af/2cd6bf/00000000000000000001008f/27/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n5&v=3")  format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 // ICOMOON
 @import '../icomoon/style';
 
@@ -15,7 +23,9 @@
 @import "photoswipe/src/css/default-skin/default-skin";
 
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap');
+
+@import url("https://p.typekit.net/p.css?s=1&k=fzm6gcu&ht=tk&f=10879.10881.10884.10886.10887.15586.32874&a=82349225&app=typekit&e=css");
 
 @import 'components/header';
 @import 'components/intro';

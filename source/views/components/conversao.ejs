@@ -1,20 +1,21 @@
 <div class="barra-conversao">
-    <button class="barra-conversao-btn js-open-modal" data-modal-target="email">
-        <i class="icon-mail"></i>
-        <span>Envie um e-mail</span>
-    </button>
-
     <button class="barra-conversao-btn js-open-modal" data-modal-target="chat">
-        <i class="icon-chat"></i>
+        <i class="icon-chat"><label for="icon-chat">Chat</label></i>
         <span>Fale com um corretor</span>
     </button>
 
-    <button class="barra-conversao-btn js-open-modal" data-modal-target="whatsapp">
+    <button class="barra-conversao-btn js-open-modal" data-modal-target="email">
+        <i class="icon-mail"><label for="icon-mail">Contato</label></i>
+        <span>Envie um e-mail</span>
+    </button>
+
+
+    <!-- <button class="barra-conversao-btn js-open-modal" data-modal-target="whatsapp">
         <i class="icon-whatsapp"></i>
         <span>Fale pelo Whatsapp</span>
     </button>
     <a class="barra-conversao-btn" href="tel:0<%= telefone.replace(/\D/g,'') %>" onclick="ga_event('Contato', 'Click Telefone','');">
         <i class="icon-tel"></i>
         <span>Ligue para: <%= telefone %></span>
-    </a>
+    </a> -->
 </div>

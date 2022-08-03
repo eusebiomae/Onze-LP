@@ -1,30 +1,31 @@
-.header{
+.header {
     --header-height: 70px;
     position: absolute;
     width: 100%;
     z-index: 3;
 
-    @include media-breakpoint-up(lg){
-        background: #ccc;
+    @include media-breakpoint-up(lg) {
+        background: #fff;
+        border-bottom: 1px solid #a56135;
     }
-    
-    .container{
+
+    .container {
         display: flex;
         align-items: center;
         height: var(--header-height);
-        
-        @include media-breakpoint-up(lg){
+
+        @include media-breakpoint-up(lg) {
             justify-content: space-between;
         }
     }
 
-    &-logo{
-        
-    }
+    // &-logo{
+
+    // }
 }
 
-.menu{
-    @include media-breakpoint-down(lg){
+.menu {
+    @include media-breakpoint-down(lg) {
         overflow-x: hidden;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
@@ -40,16 +41,16 @@
         background: #ccc;
         transition: all .3s cubic-bezier(0.075, 0.82, 0.165, 1);
 
-        @at-root .menu-active &{
+        @at-root .menu-active & {
             opacity: 1;
             transform: translateX(0);
             visibility: visible;
         }
-    } 
-    
-    nav{
-        
-        @include media-breakpoint-down(lg){
+    }
+
+    nav {
+
+        @include media-breakpoint-down(lg) {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -59,51 +60,69 @@
         }
     }
 
-    ul{
+    ul {
         padding: 0;
         margin: 0;
         list-style: none;
 
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
             display: flex;
             align-items: center;
         }
+
     }
 
-    li{
-        
-        @include media-breakpoint-down(lg){
+    li {
+
+        @include media-breakpoint-down(lg) {
             margin-bottom: 20px;
         }
 
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
             margin-left: 20px;
+        }
+
+    }
+
+    a {
+        color: #A56135;
+
+        .rectangle {
+            margin-top: 15px;
+            margin-right: 0px;
+            width: 4px;
+            height: 4px;
+            z-index: 2;
         }
     }
 
-    &-logo{
+    .menu-destaque {
+        color: #fff;
+    }
+
+    &-logo {
         margin-bottom: 50px;
 
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
             display: none;
         }
     }
 
-    &-link{
+    &-link {
         font-size: 18px;
         color: #444;
 
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
             font-size: 16px;
         }
 
-        &:hover{
+        &:hover {
             color: #444;
         }
 
     }
 
-    &-destaque{
+    &-destaque {
         background-color: #243441;
         display: inline-flex;
         align-items: center;
@@ -111,22 +130,22 @@
         padding: 15px 20px;
         font-size: 18px;
         color: #fff;
-        
-        @include media-breakpoint-up(lg){
+
+        @include media-breakpoint-up(lg) {
             // padding: 0 2px 0 20px;
             line-height: var(--header-height);
             height: var(--header-height);
             font-size: 16px;
         }
 
-        i{
+        i {
             font-size: 24px;
             margin-left: 5px;
         }
 
-        &::after{
+        &::after {
 
-            @include media-breakpoint-up(lg){
+            @include media-breakpoint-up(lg) {
                 content: "";
                 width: 50vw;
                 height: 100%;
@@ -138,13 +157,13 @@
             }
         }
 
-        &:hover{
+        &:hover {
             color: #fff;
         }
     }
 }
 
-.btn-menu{
+.btn-menu {
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -153,11 +172,11 @@
     border: 0;
     background: none;
 
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
         display: none;
     }
 
-    &-icon{
+    &-icon {
         display: flex;
         flex-flow: column;
         align-items: center;
@@ -166,30 +185,32 @@
         height: 50px;
         background: #000;
 
-        &::before, &::after, span{
+        &::before,
+        &::after,
+        span {
             content: "";
             width: 26px;
             height: 2px;
             background: #fff;
             margin: 3px 0;
-            transition: all .3s cubic-bezier(.42,0,.15,1.49);
+            transition: all .3s cubic-bezier(.42, 0, .15, 1.49);
         }
 
-        &::after{
-            transform: translateX(-15%) scaleX(0.7) ;
+        &::after {
+            transform: translateX(-15%) scaleX(0.7);
         }
 
-        @at-root .menu-active &{
+        @at-root .menu-active & {
 
-            &:before{
+            &:before {
                 transform: translateY(8px) rotate(45deg) scaleX(0.7);
             }
 
-            span{
+            span {
                 opacity: 0;
             }
 
-            &:after{
+            &:after {
                 transform: translateY(-8px) rotate(-45deg) scaleX(0.7);
             }
         }

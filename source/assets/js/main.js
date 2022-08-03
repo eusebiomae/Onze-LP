@@ -6,6 +6,7 @@ import Splide from '@splidejs/splide';
 
 // variables
 const ismobile = window.innerWidth <= 768;
+const isdesktop = window.innerWidth >= 768;
 const pageLazyLoad = new LazyLoad();
 
 // document load
@@ -52,8 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
     on('.js-select-contato', 'change', (e) => {
         let select = e.currentTarget,
             form = select.closest('form'),
-            required = select.options[select.selectedIndex].hasAttribute('data-tel-required')
-            ;
+            required = select.options[select.selectedIndex].hasAttribute('data-tel-required');
 
         if (required) {
             form.Telefone.required = true;
@@ -115,7 +115,10 @@ document.addEventListener("DOMContentLoaded", () => {
             breakpoints: {
                 640: {
                     perPage: 1,
-                    padding: { right: '10%', left: 20 },
+                    padding: {
+                        right: '10%',
+                        left: 20
+                    },
                     fixedWidth: false,
                     gap: 15,
                     arrows: false,
@@ -175,20 +178,22 @@ document.addEventListener("DOMContentLoaded", () => {
         const pos = offset(document.querySelector(href)).top;
         document.body.classList.remove('menu-active');
 
-        scroll({ top: pos, behavior: 'smooth' });
+        scroll({
+            top: pos,
+            behavior: 'smooth'
+        });
     });
 })
 
 /*
-* name: on
-* description: 
-*/
+ * name: on
+ * description: 
+ */
 const on = (...args) => {
     let selector = args[0],
         element = args.length == 4 ? args[1] : document,
         handler = args.pop(),
-        event = args.pop()
-        ;
+        event = args.pop();
 
     element.querySelectorAll(selector).forEach((target) => {
         target.addEventListener(event, handler)
@@ -196,28 +201,30 @@ const on = (...args) => {
 };
 
 /*
-* name: offset
-* description: 
-*/
+ * name: offset
+ * description: 
+ */
 const offset = (el) => {
     const rect = el.getBoundingClientRect(),
         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+    return {
+        top: rect.top + scrollTop,
+        left: rect.left + scrollLeft
+    }
 }
 
 
 /*
-* name: zoomPhotoswipe
-* description: 
-*/
+ * name: zoomPhotoswipe
+ * description: 
+ */
 const zoomPhotoswipe = (el) => {
 
     let
         grupo = el.getAttribute('data-zoom-group'),
         items = new Array(),
-        index = parseInt(el.getAttribute('data-zoom-index'))
-        ;
+        index = parseInt(el.getAttribute('data-zoom-index'));
 
     document.querySelectorAll('[data-zoom-group="' + grupo + '"]').forEach((el) => {
         let size = el.getAttribute('data-zoom-size').split('x');
@@ -251,9 +258,9 @@ const zoomPhotoswipe = (el) => {
 }
 
 /*
-* name: insertModalPS
-* description: 
-*/
+ * name: insertModalPS
+ * description: 
+ */
 const insertModalPS = () => {
     let html = `<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="pswp__bg"></div>
@@ -294,9 +301,9 @@ const insertModalPS = () => {
 }
 
 /*
-* name: masked
-* description: 
-*/
+ * name: masked
+ * description: 
+ */
 const masked = {
     tel: (selector) => {
         const telMask = ['(99) 9999-99999', '(99) 99999-9999'];
@@ -316,21 +323,24 @@ const masked = {
 }
 
 /*
-* name: gaEvent
-* description: 
-*/
+ * name: gaEvent
+ * description: 
+ */
 window.ga_event = (category, action, label) => {
     try {
-        gtag('event', action, { event_category: category, event_label: label });
+        gtag('event', action, {
+            event_category: category,
+            event_label: label
+        });
     } catch (e) {
         console.warn('GA não instalado.')
     }
 }
 
 /*
-* name: Hubid
-* description: 
-*/
+ * name: Hubid
+ * description: 
+ */
 window.hubid_callback = (state, form, channel, message) => {
     let box_msg,
         tipo = form.getAttribute('data-tipo');
@@ -377,4 +387,80 @@ window.hubid_callback = (state, form, channel, message) => {
 
             break;
     }
+}
+
+// magnify hover (Lupa)
+if (isdesktop) {
+    function magnify(imgID, zoom) {
+        var img, glass, w, h, bw;
+        img = document.getElementById(imgID);
+        /*create magnifier glass:*/
+        glass = document.createElement("div");
+        glass.setAttribute("class", "img-magnifier-glass");
+        /*insert magnifier glass:*/
+        img.parentElement.insertBefore(glass, img);
+        /*set background properties for the magnifier glass:*/
+        glass.style.backgroundImage = "url('" + img.src + "')";
+        glass.style.backgroundRepeat = "no-repeat";
+        glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+        bw = 3;
+        w = glass.offsetWidth / 2;
+        h = glass.offsetHeight / 2;
+        /*execute a function when someone moves the magnifier glass over the image:*/
+        glass.addEventListener("mousemove", moveMagnifier);
+        img.addEventListener("mousemove", moveMagnifier);
+        /*and also for touch screens:*/
+        glass.addEventListener("touchmove", moveMagnifier);
+        img.addEventListener("touchmove", moveMagnifier);
+
+        function moveMagnifier(e) {
+            var pos, x, y;
+            /*prevent any other actions that may occur when moving over the image*/
+            e.preventDefault();
+            /*get the cursor's x and y positions:*/
+            pos = getCursorPos(e);
+            x = pos.x;
+            y = pos.y;
+            /*prevent the magnifier glass from being positioned outside the image:*/
+            if (x > img.width - (w / zoom)) {
+                x = img.width - (w / zoom);
+            }
+            if (x < w / zoom) {
+                x = w / zoom;
+            }
+            if (y > img.height - (h / zoom)) {
+                y = img.height - (h / zoom);
+            }
+            if (y < h / zoom) {
+                y = h / zoom;
+            }
+            /*set the position of the magnifier glass:*/
+            glass.style.left = (x - w) + "px";
+            glass.style.top = (y - h) + "px";
+            /*display what the magnifier glass "sees":*/
+            glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+        }
+
+        function getCursorPos(e) {
+            var a, x = 0,
+                y = 0;
+            e = e || window.event;
+            /*get the x and y positions of the image:*/
+            a = img.getBoundingClientRect();
+            /*calculate the cursor's x and y coordinates, relative to the image:*/
+            x = e.pageX - a.left;
+            y = e.pageY - a.top;
+            /*consider any page scrolling:*/
+            x = x - window.pageXOffset;
+            y = y - window.pageYOffset;
+            return {
+                x: x,
+                y: y
+            };
+        }
+    }
+    /* Initiate Magnify Function
+    with the id of the image, and the strength of the magnifier glass:*/
+    magnify("mag", 3);
+    magnify("mag2", 3);
 }
