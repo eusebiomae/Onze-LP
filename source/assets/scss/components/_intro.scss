@@ -1,4 +1,4 @@
-.intro{
+.intro {
     padding: 70px 0 0;
     position: relative;
     // height: 80vh;
@@ -16,11 +16,15 @@
         }
 
         @include media-breakpoint-up (lg) {
-            top: -17px;
+            top: 7px;
+        }
+
+        @include media-breakpoint-down (md) {
+            display: none;
         }
     }
 
-    .container{
+    .container {
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -29,11 +33,35 @@
         position: relative;
         z-index: 2;
         height: 100%;
+
+        &::before {
+            content: "";
+            background-image: url("../images/onze-vetor.svg");
+            position: absolute;
+            right: -92px;
+            bottom: -11px;
+            width: 735px;
+            height: 200px;
+            z-index: -1;
+        }
+
+        span {
+            &::before {
+                content: "";
+                background-image: url("../images/line-onze.svg");
+                position: absolute;
+                right: -375px;
+                top: 372px;
+                width: 769px;
+                height: 1px;
+                z-index: -1;
+            }
+        }
     }
 
-    &-tit {
-        border-bottom: 1px solid #A56135;
-    }
+    // &-tit {
+    //     border-bottom: 1px solid #A56135;
+    // }
 
     h1 {
         font-weight: 400;
@@ -44,48 +72,112 @@
         font-style: normal;
 
         @include media-breakpoint-up (lg) {
-            margin-top: -12px;
+            margin-top: 22px;
             margin-bottom: 12px;
         }
     }
 
-    &-img{
-        display: flex;
-        margin-top: -21px;
+    &-img {
 
-        .img-info {
-            height: 177px;
+        @include media-breakpoint-up (lg) {
+            display: flex;
+            margin-top: -21px;
+            margin-left: -430px;
         }
 
-        .text1, .text2 {
+        .img-info {
+            border-top: 1px solid #A56135;
+            border-bottom: 1px solid #A56135;
+
+            @include media-breakpoint-up (lg) {
+                height: 177px;
+                width: 809px;
+            }
+        }
+
+        .text1,
+        .text2 {
             color: #A56135;
         }
 
         .text1 {
             font-size: 26px;
-            font-weight: 700; 
-            margin-top: 92px;        
+            font-weight: 700;
+            margin-top: 92px;
+
+            @include media-breakpoint-up (lg) {
+                text-align: right;
+                margin-right: 110px;
+            }
         }
 
         .text2 {
             font-size: 12px;
             font-weight: 400;
+
+            @include media-breakpoint-up (lg) {
+                text-align: right;
+                margin-right: 255px;
+            }
         }
 
-        picture{
+        picture {
             display: block;
             height: 100%;
         }
 
-        img{
+        img {
             // object-fit: cover;
             width: 570px;
             height: 427px;
         }
 
+        label {
+            color: #1B3241;
+            font-size: 12px;
+            font-weight: 400;
+            display: inherit;
+            text-align: end;
+        }
+
+    }
+
+    .btn-know {
+
+        @include media-breakpoint-up (lg) {
+            position: absolute;
+            top: 310px;
+        }
     }
 
     &-parceria {
+
+        @include media-breakpoint-up (lg) {
+            position: absolute;
+            top: 453px;
+        }
+    }
+
+    .parceria {
         display: flex;
+
+        p {
+            color: #000;
+        }
+    }
+
+    .parceria-1 {
+
+        @include media-breakpoint-up (lg) {
+            margin-bottom: 35px;
+            gap: 13px;
+        }
+    }
+
+    .parceria-2 {
+
+        @include media-breakpoint-up (lg) {
+            gap: 13px;
+        }
     }
 }
