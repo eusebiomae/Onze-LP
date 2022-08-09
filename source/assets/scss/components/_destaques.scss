@@ -1,9 +1,10 @@
-.destaques{
+.destaques {
     padding: 70px 0 0;
     position: relative;
-    color: #fff;
+    background: #a56135;
+    height: 700px;
 
-    .container{
+    .container {
         display: flex;
         // align-items: flex-start;
         // justify-content: center;
@@ -13,4 +14,41 @@
         // z-index: 2;
         // height: 100%;
     }
+
+    img {
+        width: 270px;
+        height: 250PX;
+    }
+
+    &-images {
+
+        @include media-breakpoint-up(lg) {
+            display: flex;
+            gap: 30px;
+        }
+    }
+
+    figcaption {
+        margin-top: 24px;
+    }
+
+    p {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 42px;
+    }
+
+    hr {
+        border: 1px solid #fff;
+        margin-top: 85px;
+        opacity: inherit;
+    }
+
+    .praticidade {
+        margin-top: 44px;
+    }
+
+    
 }

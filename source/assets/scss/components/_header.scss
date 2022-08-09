@@ -3,9 +3,9 @@
     position: absolute;
     width: 100%;
     z-index: 3;
+    background: #ffece0;
 
     @include media-breakpoint-up(lg) {
-        background: #fff;
         border-bottom: 1px solid #a56135;
     }
 

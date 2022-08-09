@@ -100,10 +100,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Carrossel
     document.querySelectorAll('.splide-images').forEach(el => {
         new Splide(el, {
+            type: 'slide',
             lazyLoad: true,
             focus: 'center',
-            perPage: 3,
-            fixedWidth: 765,
+            perPage: 1,
+            padding: 0,
             trimSpace: false,
             updateOnMove: true,
             pagination: false,
@@ -115,11 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
             breakpoints: {
                 640: {
                     perPage: 1,
-                    padding: {
-                        right: '10%',
-                        left: 20
-                    },
                     fixedWidth: false,
+                    padding: 0,
                     gap: 15,
                     arrows: false,
                     pagination: true

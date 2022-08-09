@@ -1,0 +1,68 @@
+.lazer {
+    background: #1b3241;
+
+    .container {
+        display: flex;
+    }
+
+    &-lazer {
+        margin-top: 48px;
+
+        a {
+            background: #fff;
+            color: #1b3241;
+            gap: 115px;
+        }
+
+        .icon-chat {
+            font-size: 27px;
+        }
+    }
+
+    &-info {
+        width: 370px;
+
+        h1 {
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 41px;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 23px;
+            color: #fff;
+        }
+    }
+
+    &-oferece {
+        margin: 48px 0 56px;
+
+        .icone {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+            margin-top: 24px;
+        }
+
+        i {
+            font-size: 50px;
+            border: 1px solid #fff;
+            color: #fff;
+        }
+
+        p {
+            color: #fff;
+        }
+    }
+
+    img {
+        height: 80px;
+        width: 100%;
+        position: relative;
+        bottom: -109px;
+    }
+}
