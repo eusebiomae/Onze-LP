@@ -19,7 +19,7 @@
             ]
         },
         {
-            "size_thumb": {"w": 830, "h": 530},
+            "size_thumb": {"w": 770, "h": 500},
             "size_thumb_mob": {"w": 480, "h": 320},
             "path": "images/lazer/",
             "legendas": [

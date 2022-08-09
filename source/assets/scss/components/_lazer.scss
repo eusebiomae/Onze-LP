@@ -2,10 +2,12 @@
     background: #1b3241;
 
     .container {
-        display: flex;
+        @include media-breakpoint-up (lg) {
+            display: flex;
+        }
     }
 
-    &-lazer {
+    &-content {
         margin-top: 48px;
 
         a {
@@ -59,10 +61,18 @@
         }
     }
 
+    &-galeria{
+        max-width: 770px;
+
+        .splide{
+            --nav-margin: 415px;
+            --nav-bg: transparent;
+            --nav-color: #fff;
+            --pag-bg: #fff;
+        }
+    }
+
     img {
-        height: 80px;
-        width: 100%;
-        position: relative;
-        bottom: -109px;
+
     }
 }

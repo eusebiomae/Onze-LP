@@ -1,6 +1,6 @@
 <section class="lazer">
     <div class="container">
-        <div class="lazer-lazer">
+        <div class="lazer-content">
 
             <div class="lazer-info">
                 <h1 class="tit">Áreas Comuns</h1>
@@ -26,13 +26,15 @@
                 </div>
             </div>
     
-            <a href="#" class="btn">Saiba mais <i class="icon-chat"></i></a>
-
+            
         </div>
-
-        <% index_galeria = 1 %> 
-        <% include galeria %>
-
+        
+        <div class="lazer-galeria">            
+            <% index_galeria = 1 %> 
+            <% include galeria %>
+        </div>
+        
+        <a href="#" class="btn">Saiba mais <i class="icon-chat"></i></a>
     </div>
 
     <img src="images/bg-textura.jpg" alt="">

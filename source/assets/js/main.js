@@ -126,6 +126,32 @@ document.addEventListener("DOMContentLoaded", () => {
         }).mount();
     });
 
+    if(ismobile){
+        // DESTAQUES
+        document.querySelectorAll('.destaques-images .splide').forEach(el => {
+            new Splide(el, {
+                type: 'slide',
+                perPage: 1,
+                gap: 15,
+                autoWidth: true,
+                padding: { right: '20%', left: 0 },
+                pagination: false
+            }).mount();
+        });
+
+        // EUSEBIO ARRUMAR
+        document.querySelectorAll('').forEach(el => {
+            new Splide(el, {
+                type: 'slide',
+                perPage: 1,
+                gap: 15,
+                autoWidth: true,
+                padding: { right: '20%', left: 0 },
+                pagination: false
+            }).mount();
+        });
+    }
+
 
     // Abas
     document.querySelectorAll('[data-tab]').forEach(el => {
