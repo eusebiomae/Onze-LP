@@ -1,4 +1,22 @@
 .realizacao{
-    background: #e7e7e7;
+    background: #1b3241;
+    color: #fff;
+    height: 160px;
     
+    &-info {
+        margin-top: 12px;
+        
+        h1 {
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 41.02px;
+            text-transform: uppercase;
+        }
+    
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 23.08px;
+        }
+    }
 }
