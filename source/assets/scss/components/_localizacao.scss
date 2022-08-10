@@ -205,16 +205,29 @@
             .escola {
                 margin: 26px 29px 69px 24px;
             }
+        }       
+
+
+        .btn-content{
+            margin: 40px 0 0 ;
+            
+            @include media-breakpoint-up(lg) {
+                display: flex;
+                justify-content: center;           
+            }
+            
+            a.btn {
+                width: calc(100% - 20px);
+                color: #fff;
+                background: #1b3241;
+                
+                @include media-breakpoint-up(lg) {
+                    max-width: 270px;            
+                }
+            }
         }
-
     }
 
-    a {
-        margin: 40px 548px;
-        color: #fff;
-        background: #1b3241;
-        gap: 100px;
-    }
 
     a:hover {
         border: 1px solid #1b3241;

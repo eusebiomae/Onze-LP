@@ -151,11 +151,11 @@ ul {
     visibility: visible;
 
     &__pagination {
-        padding: 30px 0 0;
+        padding: 25px 0 0;
 
         &__page {
-            width: 10px;
-            height: 10px;
+            width: 6px;
+            height: 6px;
             opacity: 0.6;
             background-color: transparent;
             border: 1px solid var(--pag-bg);
@@ -337,3 +337,27 @@ br {
         }
     }
 }
+
+// EFEITO LUPA 
+.img-magnifier-container {
+    position: relative;
+    .img-magnifier-glass {
+        position: absolute;
+        z-index: 3;
+        border: 1px solid #243441;
+        border-radius: 50%;
+        cursor: none;      
+        width: 250px;
+        height: 250px;
+        opacity:0;
+        pointer-events:none;
+        z-index: 1;
+    }
+    &:hover{
+        .img-magnifier-glass{
+            opacity:1;
+            pointer-events:initial;
+
+        }
+    }
+  }

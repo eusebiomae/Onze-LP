@@ -2,6 +2,8 @@
     background: #1b3241;
 
     .container {
+        position: relative;
+        
         @include media-breakpoint-up (lg) {
             display: flex;
         }
@@ -83,6 +85,10 @@
     &-galeria {
         max-width: 770px;
 
+        @include media-breakpoint-up (lg) {
+            margin: 69px 0 0 0;
+        }
+
         .splide {
             --nav-margin: 415px;
             --nav-bg: transparent;
@@ -92,9 +98,7 @@
     }
 
     .btn {
-        position: relative;
-        top: 44px;
-        margin-bottom: 48px;
+        margin: 44px 0 48px;
         width: 100%;
         background: #fff;
         color: #1b3241;
@@ -102,9 +106,8 @@
 
         @include media-breakpoint-up (lg) {
             position: absolute;
-            top: 2778px;
-            left: 106px;
-            gap: 100px;
+            bottom: 30px;
+            left: 20px;
             margin-bottom: 0;
             width: auto;
         }

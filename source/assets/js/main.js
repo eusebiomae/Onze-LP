@@ -153,23 +153,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // NOMAH COM AUTOHEIGHT
         document.querySelectorAll('.parceiros-nomah .splide').forEach(el => {
-            const slider = new Splide(el, {
+            new Splide(el, {
                 type: 'slide',
-                perPage: 2,
-                perMove:2,
-                gap: 15,
-                padding: 0,
-                pagination: false
+                perPage: 1,
+                perMove: 1,
+                gap: 0,
+                padding: { right: '20px', left: 0 },
+                pagination: false,
+                destroy: true,
             }).mount();
-
-            const updateHeight = () =>{
-                let slide = slider.Components.Slides.getAt( slider.index ).slide;
-                slide.parentElement.style.height = slide.offsetHeight + 'px';
-            };
-
-            slider.on('move resize', updateHeight);
-
-            updateHeight();
         });
 
         // MARCO COM AUTOHEIGHT
@@ -179,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 perPage: 1,
                 gap: 30,
                 padding: 0,
-                pagination: false
+                pagination: true
             }).mount();
 
             const updateHeight = () =>{
@@ -455,7 +447,7 @@ window.hubid_callback = (state, form, channel, message) => {
 }
 
 // magnify hover (Lupa)
-if (isdesktop) {
+if(isdesktop){
     function magnify(imgID, zoom) {
         var img, glass, w, h, bw;
         img = document.getElementById(imgID);
@@ -477,55 +469,41 @@ if (isdesktop) {
         /*and also for touch screens:*/
         glass.addEventListener("touchmove", moveMagnifier);
         img.addEventListener("touchmove", moveMagnifier);
-
         function moveMagnifier(e) {
-            var pos, x, y;
-            /*prevent any other actions that may occur when moving over the image*/
-            e.preventDefault();
-            /*get the cursor's x and y positions:*/
-            pos = getCursorPos(e);
-            x = pos.x;
-            y = pos.y;
-            /*prevent the magnifier glass from being positioned outside the image:*/
-            if (x > img.width - (w / zoom)) {
-                x = img.width - (w / zoom);
-            }
-            if (x < w / zoom) {
-                x = w / zoom;
-            }
-            if (y > img.height - (h / zoom)) {
-                y = img.height - (h / zoom);
-            }
-            if (y < h / zoom) {
-                y = h / zoom;
-            }
-            /*set the position of the magnifier glass:*/
-            glass.style.left = (x - w) + "px";
-            glass.style.top = (y - h) + "px";
-            /*display what the magnifier glass "sees":*/
-            glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+          var pos, x, y;
+          /*prevent any other actions that may occur when moving over the image*/
+          e.preventDefault();
+          /*get the cursor's x and y positions:*/
+          pos = getCursorPos(e);
+          x = pos.x;
+          y = pos.y;
+          /*prevent the magnifier glass from being positioned outside the image:*/
+          if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+          if (x < w / zoom) {x = w / zoom;}
+          if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+          if (y < h / zoom) {y = h / zoom;}
+          /*set the position of the magnifier glass:*/
+          glass.style.left = (x - w) + "px";
+          glass.style.top = (y - h) + "px";
+          /*display what the magnifier glass "sees":*/
+          glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
         }
-
         function getCursorPos(e) {
-            var a, x = 0,
-                y = 0;
-            e = e || window.event;
-            /*get the x and y positions of the image:*/
-            a = img.getBoundingClientRect();
-            /*calculate the cursor's x and y coordinates, relative to the image:*/
-            x = e.pageX - a.left;
-            y = e.pageY - a.top;
-            /*consider any page scrolling:*/
-            x = x - window.pageXOffset;
-            y = y - window.pageYOffset;
-            return {
-                x: x,
-                y: y
-            };
+          var a, x = 0, y = 0;
+          e = e || window.event;
+          /*get the x and y positions of the image:*/
+          a = img.getBoundingClientRect();
+          /*calculate the cursor's x and y coordinates, relative to the image:*/
+          x = e.pageX - a.left;
+          y = e.pageY - a.top;
+          /*consider any page scrolling:*/
+          x = x - window.pageXOffset;
+          y = y - window.pageYOffset;
+          return {x : x, y : y};
         }
-    }
-    /* Initiate Magnify Function
-    with the id of the image, and the strength of the magnifier glass:*/
-    magnify("mag", 3);
-    magnify("mag2", 3);
+      }
+      /* Initiate Magnify Function
+      with the id of the image, and the strength of the magnifier glass:*/
+      magnify("mag", 3);
+      magnify("mag2", 3);
 }
