@@ -18,7 +18,22 @@
             margin: -210px 0;
         }
 
+        img {
+            @include media-breakpoint-down (md) {
+                width: 100%;
+                height: 195px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
         figcaption {
+            @include media-breakpoint-down (md) {
+                position: relative;
+                top: 125px;
+            }
+
             @include media-breakpoint-up (lg) {
                 width: 1170px;
             }
@@ -35,14 +50,22 @@
     }
 
     &-infos {
-        margin: 277px 0 56px;
+        margin: 175px 0 56px;
+
+        @include media-breakpoint-up (lg) {
+            margin: 277px 0 56px;
+        }
 
         h1 {
-            font-size: 32px;
+            font-size: 30px;
             font-weight: 400;
             line-height: 41px;
             text-transform: uppercase;
             margin-bottom: 24px;
+
+            @include media-breakpoint-up (lg) {
+                font-size: 32px;
+            }
         }
 
         p {
@@ -53,11 +76,24 @@
     }
 
     &-logos {
-        margin: 0 98px 90px;
-        display: flex;
-        gap: 130px;
-        justify-content: center;
-        align-items: baseline;
+        display: block;
+        text-align: center;
+        margin-bottom: 29px;
+
+        @include media-breakpoint-up (lg) {
+            margin: 0 98px 90px;
+            display: flex;
+            gap: 130px;
+            justify-content: center;
+            align-items: baseline;
+        }
+
+        .design .mestisso, .cardim {
+
+            @include media-breakpoint-down (md) {
+            margin-top: 56px;
+            }
+        }
 
         h1 {
             font-size: 14px;

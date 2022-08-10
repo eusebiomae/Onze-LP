@@ -7,11 +7,19 @@
     }
 
     &-info {
+        @include media-breakpoint-down(md) {
+            margin-bottom: 24px;
+        }
+
         h1 {
-            font-size: 32px;
+            font-size: 30px;
             font-weight: 400;
             line-height: 41px;
             color: #a56135;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 30px;
+            }
         }
 
         p {
@@ -133,6 +141,7 @@
     .carrosel {
         margin-top: 122px;
     }
+
     &-regiao {
         margin: 0 -20px 0 0;
 
@@ -140,20 +149,20 @@
             margin: 0;
         }
 
-        .splide{
-            &__list{
+        .splide {
+            &__list {
                 @include media-breakpoint-up(lg) {
                     display: flex;
                     gap: 30px;
                 }
             }
 
-            &__slide{
-                .item{
+            &__slide {
+                .item {
                     width: 270px;
 
-                    figure{
-                        width: 100%;    
+                    figure {
+                        width: 100%;
                     }
 
                     img {
@@ -181,7 +190,7 @@
             bottom: 16px;
             left: 224px;
         }
-        
+
         figcaption {
             height: 133px;
 

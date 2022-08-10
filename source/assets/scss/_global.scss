@@ -157,8 +157,8 @@ ul {
             width: 10px;
             height: 10px;
             opacity: 0.6;
-            background-color: var(--pag-bg);
-            border-radius: 50%;
+            background-color: transparent;
+            border: 1px solid var(--pag-bg);
             margin: 0 3px;
             padding: 0;
             transition: all .2s ease-in-out;
@@ -166,6 +166,7 @@ ul {
             &.is-active {
                 opacity: 1;
                 transform: scale(1.4);
+                background-color: var(--pag-bg);
             }
         }
     }

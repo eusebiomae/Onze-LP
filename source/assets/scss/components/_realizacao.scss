@@ -1,22 +1,38 @@
-.realizacao{
+.realizacao {
     background: #1b3241;
     color: #fff;
-    height: 160px;
-    
+    height: 313px;
+
+    @include media-breakpoint-up(lg) {
+        height: 160px;
+    }
+
     &-info {
-        margin-top: 12px;
-        
+        margin-top: 48px;
+        @include media-breakpoint-up(lg) {
+            margin-top: 12px;
+        }
+
         h1 {
-            font-size: 32px;
+            font-size: 30px;
             font-weight: 400;
             line-height: 41.02px;
             text-transform: uppercase;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 32px;
+            }
         }
-    
+
         p {
             font-size: 18px;
             font-weight: 400;
-            line-height: 23.08px;
+            line-height: 33.08px;
+
+            @include media-breakpoint-up(lg) { 
+                line-height: 23.08px;
+            }
+
         }
     }
 }

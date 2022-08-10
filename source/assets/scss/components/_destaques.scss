@@ -2,7 +2,11 @@
     padding: 70px 0 0;
     position: relative;
     background: #a56135;
-    height: 700px;
+    height: 540px;
+
+    @include media-breakpoint-up(lg) {
+        height: 700px;
+    }
 
     &-images {
         margin: 0 -20px 0 0;
@@ -11,26 +15,42 @@
             margin: 0;
         }
 
-        .splide{
-            &__list{
+        .splide {
+            &__list {
                 @include media-breakpoint-up(lg) {
                     display: flex;
                     gap: 30px;
                 }
             }
 
-            &__slide{
-                .item{
+            &__slide {
+                .item {
                     width: 270px;
 
-                    figure{
-                        width: 100%;    
+                    figure {
+                        width: 100%;
+
+                        @include media-breakpoint-down(md) {
+                            background: #fff;
+                        }
                     }
 
                     img {
                         width: 100%;
                         height: 250px;
                         object-fit: cover;
+                    }
+
+                    .icone-yasbek {
+                        width: 21.12px;
+                        height: 21.29px;
+                        position: absolute;
+                        bottom: 31px;
+                        right: 15px;
+
+                        @include media-breakpoint-up(lg) {
+                            display: none
+                        }
                     }
                 }
             }
@@ -39,6 +59,7 @@
 
     figcaption {
         margin-top: 24px;
+
     }
 
     p {
@@ -47,6 +68,11 @@
         font-size: 32px;
         font-weight: 400;
         line-height: 42px;
+
+        @include media-breakpoint-down (md) {
+            color: #a56135;
+            margin-left: 24px;
+        }
     }
 
     hr {
@@ -59,5 +85,5 @@
         margin-top: 44px;
     }
 
-    
+
 }

@@ -150,6 +150,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 pagination: false
             }).mount();
         });
+
+        // NOMAH
+        document.querySelectorAll('.nomah .splide').forEach(el => {
+            new Splide(el, {
+                type: 'slide',
+                perPage: 1,
+                gap: 15,
+                autoWidth: true,
+                padding: { right: '20%', left: 0 },
+                pagination: false
+            }).mount();
+        });
+
+        // MARCO
+        document.querySelectorAll('.marco .splide').forEach(el => {
+            new Splide(el, {
+                type: 'slide',
+                perPage: 1,
+                gap: 15,
+                autoWidth: true,
+                padding: { right: '20%', left: 0 },
+                pagination: false
+            }).mount();
+        });
     }
 
 
