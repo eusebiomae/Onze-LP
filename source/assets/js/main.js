@@ -151,14 +151,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }).mount();
         });
 
-        // NOMAH - VERIFICAR AQUI AUTO HEIGHT
-        document.querySelectorAll('.nomah .splide').forEach(el => {
+        // NOMAH COM AUTOHEIGHT
+        document.querySelectorAll('.parceiros-nomah .splide').forEach(el => {
             const slider = new Splide(el, {
                 type: 'slide',
-                perPage: 1,
+                perPage: 2,
+                perMove:2,
                 gap: 15,
-                autoWidth: true,
-                padding: { right: '20%', left: 0 },
+                padding: 0,
                 pagination: false
             }).mount();
 
@@ -172,16 +172,24 @@ document.addEventListener("DOMContentLoaded", () => {
             updateHeight();
         });
 
-        // MARCO
-        document.querySelectorAll('.marco .splide').forEach(el => {
-            new Splide(el, {
+        // MARCO COM AUTOHEIGHT
+        document.querySelectorAll('.parceiros-marco .splide').forEach(el => {
+            const slider = new Splide(el, {
                 type: 'slide',
                 perPage: 1,
-                gap: 15,
-                autoWidth: true,
-                padding: { right: '20%', left: 0 },
+                gap: 30,
+                padding: 0,
                 pagination: false
             }).mount();
+
+            const updateHeight = () =>{
+                let slide = slider.Components.Slides.getAt( slider.index ).slide;
+                slide.parentElement.style.height = slide.offsetHeight + 'px';
+            };
+
+            slider.on('move resize', updateHeight);
+
+            updateHeight();
         });
     }
 

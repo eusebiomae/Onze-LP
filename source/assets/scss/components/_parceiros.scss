@@ -4,7 +4,8 @@
 
     &-info {
         background: #a56135;
-        margin: 50px 0 32px 98px;
+        margin-top: 41px;
+        margin-bottom: 32px;
 
         .tit {
             font-size: 32px;
@@ -31,16 +32,21 @@
         }
     }
 
-    .nomah {
+    &-nomah {
         background: #1b3241;
         width: 100%;
-        height: 306px;
+        padding: 25px 0 54px;
+
+        @include media-breakpoint-up (lg) {
+            height: 306px;
+            padding: 0;
+        }
 
         img {
-            margin: 48px 0 44px 20px;
+            margin: 29px 0 44px;
 
             @include media-breakpoint-up (lg) {
-                margin: 54px 1087px 0 98px;
+                margin: 54px 0 40px;
             }
         }
 
@@ -52,9 +58,9 @@
 
         .splide {
             &__list {
-                
-                //VERIFICAR AQUI
-                transition: .2s cubic-bezier(0.25, 1, 0.5, 1)!important;
+
+                //AUTO HEIGTH
+                transition: .2s cubic-bezier(0.25, 1, 0.5, 1) !important;
                 transition-property: transform, height;
                 align-items: flex-start;
 
@@ -66,7 +72,9 @@
 
             &__slide {
                 .item {
-                    width: 270px;
+                    // @include media-breakpoint-down(md) {
+                    //     width: 175px;
+                    // }
 
                     figure {
                         width: 100%;
@@ -81,36 +89,65 @@
             }
         }
 
-        &-infos {
+        .nomah-infos {
             display: flex;
-            margin: 44px 207px 54px 76px;
             color: #fff;
 
-            .numeros {
-                margin-left: 24px;
+            .n1 {
+                @include media-breakpoint-down(lg) {
+                    margin-right: 25px;
+                }
             }
 
             .n2 {
-                margin-right: 25px;
+                margin-left: 25px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-left: -8px;
+                    margin-right: 25px;
+                }
             }
 
             .n3 {
-                margin-right: -13px;
+                margin-left: 25px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-right: -13px;
+                    margin-left: -4px;
+                }
             }
 
             .n4 {
-                margin-right: -36px;
+                margin-left: 25px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-right: -17px;
+                    margin-left: -1px;
+                }
             }
 
             .n5 {
-                margin-right: -33px;
+                margin-left: 20px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-right: -16px;
+                    margin-left: -5px;
+                }
+            }
+
+            .n6 {
+                margin-left: 11px;
+
+                @include media-breakpoint-up(lg) {
+                    margin-left: 0;
+                }
             }
 
             h1 {
                 font-size: 24px;
                 font-weight: 700;
                 line-height: 30.77px;
-                width: 219px;
+                width: 165px;
             }
 
             p {
@@ -121,20 +158,20 @@
 
             .divisor {
 
-                @include media-breakpoint-up (lg) {
-                    height: 69.01px;
-                    border-right: 2px dashed #e3e3e3;
-                    position: relative;
-                    margin-top: 0px;
-                    margin-left: -45px;
-                }
+                // @include media-breakpoint-up (lg) {
+                height: 69.01px;
+                border-right: 2px dashed #e3e3e3;
+                position: relative;
+                margin-top: 0px;
+                // margin-left: -45px;
+                // }
             }
         }
     }
 
-    .marco {
-        margin: 32px 0 10px 101px;
+    &-marco {
         color: #fff;
+        padding: 32px 0;
 
         // margin: 0 -20px 0 0;
 
@@ -143,16 +180,26 @@
         // }
 
         .splide {
+
             &__list {
+                //AUTO HEIGTH
+                transition: .2s cubic-bezier(0.25, 1, 0.5, 1) !important;
+                transition-property: transform, height;
+                align-items: flex-start;
+
                 @include media-breakpoint-up(lg) {
-                    display: flex;
+                    display: block;
                     gap: 30px;
                 }
             }
 
             &__slide {
                 .item {
-                    width: 270px;
+                    // width: 270px;
+
+                    @include media-breakpoint-up(lg) {
+                        width: 100%;
+                    }
 
                     figure {
                         width: 100%;
@@ -167,8 +214,8 @@
             }
         }
 
-        &-info {
-            margin-bottom: 24px;
+        .marco-info {
+            margin-top: 24px;
 
             h1 {
                 font-size: 24px;
@@ -184,10 +231,14 @@
         }
 
         .pe {
-            font-size: 18px;
+            font-size: 12px;
             font-weight: 400;
             line-height: 15.38px;
             margin-top: 32px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 18px;
+            }
         }
     }
 }
