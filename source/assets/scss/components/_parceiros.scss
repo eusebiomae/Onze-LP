@@ -52,6 +52,12 @@
 
         .splide {
             &__list {
+                
+                //VERIFICAR AQUI
+                transition: .2s cubic-bezier(0.25, 1, 0.5, 1)!important;
+                transition-property: transform, height;
+                align-items: flex-start;
+
                 @include media-breakpoint-up(lg) {
                     display: flex;
                     gap: 30px;

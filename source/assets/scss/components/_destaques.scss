@@ -17,6 +17,7 @@
 
         .splide {
             &__list {
+
                 @include media-breakpoint-up(lg) {
                     display: flex;
                     gap: 30px;

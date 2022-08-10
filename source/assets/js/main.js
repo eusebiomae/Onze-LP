@@ -136,7 +136,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 autoWidth: true,
                 padding: { right: '20%', left: 0 },
                 pagination: false
-            }).mount();
+            }).mount();            
         });
 
         // REGIAO
@@ -151,9 +151,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }).mount();
         });
 
-        // NOMAH
+        // NOMAH - VERIFICAR AQUI AUTO HEIGHT
         document.querySelectorAll('.nomah .splide').forEach(el => {
-            new Splide(el, {
+            const slider = new Splide(el, {
                 type: 'slide',
                 perPage: 1,
                 gap: 15,
@@ -161,6 +161,15 @@ document.addEventListener("DOMContentLoaded", () => {
                 padding: { right: '20%', left: 0 },
                 pagination: false
             }).mount();
+
+            const updateHeight = () =>{
+                let slide = slider.Components.Slides.getAt( slider.index ).slide;
+                slide.parentElement.style.height = slide.offsetHeight + 'px';
+            };
+
+            slider.on('move resize', updateHeight);
+
+            updateHeight();
         });
 
         // MARCO
