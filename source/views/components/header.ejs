@@ -1,9 +1,20 @@
 <header class="header">
     <div class="container">
 
-        <div class="menu">
-            <nav>
+        <div class="menu-toggle js-menu-toggle">
+            <div class="one"></div>
+            <div class="two"></div>
+            <label class="menu-label" for="menu">menu</label>
+        </div>
 
+        <div class="menu">
+            <div class="menu-toggle js-menu-toggle">
+                <div class="one"></div>
+                <div class="two"></div>
+                <label class="menu-label" for="menu">recolher menu</label>
+            </div>
+
+            <nav>
                 <ul>
                     <li><a class="menu-link" href="#destaques"><img src="images/rectangle-header.svg" alt="" class="rectangle">Projeto </a></li>
                     <li><a class="menu-link" href="#localizacao"><img src="images/rectangle-header.svg" alt="" class="rectangle">Localização</a></li>
@@ -12,15 +23,15 @@
                     <li><a class="menu-destaque js-open-modal" data-modal-target="email" href="#"><span>Contato</span> <i class="icon-chat"></i></a></li>
                 </ul>
             </nav>
+            <div class="img-onze">
+                <figure>
+                    <img src="../images/onze-vetor.svg" alt="">
+                </figure>
+            </div>
         </div>
-
     </div>
 
-    <div class="header-logo">
-        <img src="images/logo-onze.png" class="logo-mobile" alt="<%=nome%>" width="100">
-    </div>
-
-    <button class="btn-menu js-menu-toggle">
+    <!-- <button class="btn-menu js-menu-toggle">
         <span class="btn-menu-icon"><span></span></span>
-    </button>
+    </button> -->
 </header>

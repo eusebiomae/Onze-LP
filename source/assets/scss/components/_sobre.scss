@@ -15,8 +15,13 @@
     &-image {
 
         @include media-breakpoint-up (lg) {
-            // margin: -210px 98px;
             margin: -210px 0;
+        }
+
+        figcaption {
+            @include media-breakpoint-up (lg) {
+                width: 1170px;
+            }
         }
 
         p {
@@ -30,7 +35,7 @@
     }
 
     &-infos {
-        margin: 284px 98px 56px;
+        margin: 277px 0 56px;
 
         h1 {
             font-size: 32px;
@@ -48,7 +53,7 @@
     }
 
     &-logos {
-        margin: 0 98px;
+        margin: 0 98px 90px;
         display: flex;
         gap: 130px;
         justify-content: center;

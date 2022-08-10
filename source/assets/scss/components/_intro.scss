@@ -8,20 +8,26 @@
         position: absolute;
         z-index: 3;
         top: 0;
-        right: 105px;
+        right: 30px;
 
         img {
-            width: 170px;
-            height: 194px;
+            width: 135px;
+            height: 150px;
+
+            @include media-breakpoint-up (lg) {
+                width: 170px;
+                height: 194px;
+            }
         }
 
         @include media-breakpoint-up (lg) {
             top: 7px;
+            right: 105px;
         }
 
-        @include media-breakpoint-down (md) {
-            display: none;
-        }
+        // @include media-breakpoint-down (md) {
+        //     display: none;
+        // }
     }
 
     .container {

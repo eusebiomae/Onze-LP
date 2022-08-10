@@ -61,10 +61,10 @@
         }
     }
 
-    &-galeria{
+    &-galeria {
         max-width: 770px;
 
-        .splide{
+        .splide {
             --nav-margin: 415px;
             --nav-bg: transparent;
             --nav-color: #fff;
@@ -72,7 +72,30 @@
         }
     }
 
-    img {
+    .btn {
+        position: absolute;
+        top: 2778px;
+        left: 106px;
+        background: #fff;
+        color: #1b3241;
+        gap: 100px;
+    }
 
+    .btn:hover {
+        border: 1px solid #fff;
+        color: #fff;
+        background: none;
+        gap: 100px;
+    }
+
+    .icon-chat {
+        font-size: 27px;
+    }
+
+    img {
+        height: auto;
+        width: 100%;
+        position: relative;
+        bottom: -30px;
     }
 }

@@ -139,8 +139,8 @@ document.addEventListener("DOMContentLoaded", () => {
             }).mount();
         });
 
-        // EUSEBIO ARRUMAR
-        document.querySelectorAll('').forEach(el => {
+        // REGIAO
+        document.querySelectorAll('.localizacao-regiao .splide').forEach(el => {
             new Splide(el, {
                 type: 'slide',
                 perPage: 1,
