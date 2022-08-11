@@ -2,31 +2,31 @@
     <div class="modal-contato-scroll">
         <div class="container">
 
-            <div class="infos">
-                <img src="images/logo-onze.png" alt="<%= nome %>">
-
-                <hr class="linha1">
-
-                <h3 class="modal-contato-tit">
-                    Fale com um corretor
-                </h3>
-
-                <hr class="linha2">
-                <hr class="linha3">
-
-                <span></span>
-            </div>
-
-            <div class="form">
-                <%
-                form_nome = 'formModalchat';
-                form_prefixo = 'FMC';
-                form_tipo = 'Chat';
-                form_canal = 'chat';
-                form_btn = 'Iniciar atendimento';
-                %>
+            <div class="modal-contato-content">
+                
+                <div class="modal-contato-infos">
+                    
+                    <img src="images/logo-onze.png" alt="<%= nome %>">
     
-                <% include form %>
+                    <h3 class="tit">
+                        Fale com um corretor
+                    </h3>
+    
+                    <div class="detalhe"></div>
+                </div>
+    
+                <div class="form">
+                    <%
+                    form_nome = 'formModalchat';
+                    form_prefixo = 'FMC';
+                    form_tipo = 'Chat';
+                    form_canal = 'chat';
+                    form_btn = 'Iniciar atendimento';
+                    %>
+        
+                    <% include form %>
+                </div>
+
             </div>
 
         </div>

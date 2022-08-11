@@ -1,32 +1,32 @@
 <div class="modal-contato" data-modal-contato="email">
     <div class="modal-contato-scroll">
         <div class="container">
-            
-            <div class="infos">
-                <img src="images/logo-onze.png" alt="<%= nome %>">
 
-                <hr class="linha1">
+            <div class="modal-contato-content">
 
-                <h3 class="modal-contato-tit">
-                    Fale com a nossa equipe
-                </h3>
-
-                <hr class="linha2">
-                <hr class="linha3">
-
-                <span></span>
-            </div>
-
-            <div class="form">
-                <%
-                form_nome = 'formModalEmail';
-                form_prefixo = 'FME';
-                form_tipo = 'Email';
-                form_canal = 'mensagem';
-                form_btn = 'Enviar';
-                %>
+                <div class="modal-contato-infos">
     
-                <% include form %>
+                    <img src="images/logo-onze.png" alt="<%= nome %>">
+    
+                    <h3 class="tit">
+                        Fale com a nossa equipe
+                    </h3>
+    
+                    <div class="detalhe"></div>
+                </div>
+    
+                <div class="form">
+                    <%
+                    form_nome = 'formModalEmail';
+                    form_prefixo = 'FME';
+                    form_tipo = 'Email';
+                    form_canal = 'mensagem';
+                    form_btn = 'Enviar';
+                    %>
+        
+                    <% include form %>
+                </div>
+                
             </div>
 
         </div>
