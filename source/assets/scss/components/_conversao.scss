@@ -1,9 +1,9 @@
-.barra-conversao{
+.barra-conversao {
     position: fixed;
     z-index: 9;
     display: flex;
-    
-    @include media-breakpoint-down(lg){
+
+    @include media-breakpoint-down(lg) {
         bottom: 0;
         right: 0;
         width: 100%;
@@ -13,14 +13,14 @@
         border-radius: 10px 10px 0 0;
     }
 
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(lg) {
         flex-flow: column;
         right: 20px;
         top: 50%;
         transform: translateY(-50%);
     }
 
-    &-btn{
+    &-btn {
         --btn-bg: #{$primary};
         --btn-color: #fff;
 
@@ -29,11 +29,11 @@
         border: none;
         margin: 0 5px 0 0;
 
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
             margin: 5px 0;
         }
 
-        i{
+        i {
             position: relative;
             z-index: 2;
             display: grid;
@@ -44,21 +44,43 @@
             font-size: 23px;
             background: #E33237;
             color: var(--btn-color);
+
+            @include media-breakpoint-down(md) {
+                width: 130px;
+            }
         }
 
-        label {
+        .label-chat {
             font-size: 13px;
             margin-top: -12px;
             font-family: 'futura-pt';
+
+            @include media-breakpoint-down(md) {
+                display: none;
+            }
+
         }
-        
+
+        .span-icon {
+            @include media-breakpoint-down (md) {
+                font-size: 13px;
+                margin-top: -12px;
+                font-family: 'futura-pt';
+            }
+            
+            @include media-breakpoint-up(lg) {
+                display: none;
+            }
+        }
+
         i:hover {
             label {
                 display: none;
             }
         }
 
-        span{
+
+        span {
             position: absolute;
             top: 0;
             right: calc(100% - 1px);
@@ -73,15 +95,15 @@
             transition: all .3s ease-in-out;
             transform: translate(10px);
 
-            @include media-breakpoint-down(lg){
-                display: none;
-            }
+            // @include media-breakpoint-down(lg){
+            //     display: none;
+            // }
         }
 
-        &:hover{
+        &:hover {
             color: var(--btn-color);
 
-            span{
+            span {
                 transform: none;
                 opacity: 1;
                 visibility: visible;
