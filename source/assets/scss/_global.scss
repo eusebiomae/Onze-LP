@@ -295,10 +295,14 @@ ul {
             figcaption {
                 opacity: 1;
                 position: absolute;
-                bottom: -44px;
+                bottom: -25px;
                 right: 0;
                 color: #fff;
                 font-size: 12px;
+
+                @include media-breakpoint-down(lg) {
+                    bottom: 28px;
+                } 
             }
         }
 

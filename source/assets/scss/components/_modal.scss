@@ -1,10 +1,10 @@
-.modal-contato{
+.modal-contato {
     --bg-contato: #fff;
     --msg-load-color-1: #00000033;
     --msg-load-color-2: #00000080;
     --msg-btn-bg: #000;
     --msg-btn-color: #fff;
-    
+
     background: var(--bg-contato);
     position: fixed;
     top: 0;
@@ -16,13 +16,13 @@
     visibility: hidden;
     transition: opacity .2s ease-in-out;
 
-    &.active{
+    &.active {
         opacity: 1;
         visibility: visible;
         z-index: 11;
     }
-    
-    &-scroll{
+
+    &-scroll {
         padding: 20px 0;
         height: 100%;
         overflow-x: hidden;
@@ -30,8 +30,10 @@
         -webkit-overflow-scrolling: touch;
     }
 
-    .container{
-        @include media-breakpoint-up(lg){
+    .container {
+        position: relative;
+
+        @include media-breakpoint-up(lg) {
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -40,42 +42,99 @@
         }
     }
 
-    &-tit{
+    &-tit {
         display: flex;
         align-items: center;
         flex-flow: column;
         margin-bottom: 20px;
 
-        img{
-            width: 150px;
-            margin-bottom: 20px;
+        position: absolute;
+        top: 90px;
+        left: -95px;
+        font-size: 32px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #a56135;
+
+        span {
+            font-size: 18px;
         }
 
-        span{
-            font-size: 18px;
+    }
+
+    .linha1 {
+        position: absolute;
+        left: -235px;
+        top: 30px;
+        width: 568px;
+        border: 1px solid #a56135;
+        opacity: inherit;
+    }
+
+    .linha2 {
+        position: absolute;
+        left: -235px;
+        bottom: 444px;
+        width: 568px;
+        border: 1px solid #a56135;
+        opacity: inherit;
+    }
+
+    .linha3 {
+        position: absolute;
+        left: -235px;
+        bottom: 272px;
+        width: 568px;
+        border: 1px solid #a56135;
+        opacity: inherit;
+        z-index: -1;
+    }
+
+    img {
+        width: 170px;
+        height: auto;
+        margin-bottom: 20px;
+        position: absolute;
+        top: 190px;
+        left: -95px;
+    }
+
+    &::before {
+        content: "";
+        background-image: url("../images/onze-vetor.svg");
+        position: absolute;
+        left: -90px;
+        bottom: 0;
+        width: 735px;
+        height: 200px;
+        opacity: inherit;
+
+        @include media-breakpoint-down(lg) {
+            bottom: -43px;
         }
     }
 
-    .form{
-        @include media-breakpoint-up(lg){
+    .form {
+        @include media-breakpoint-up(lg) {
             width: 520px;
         }
     }
 
-    .btn-fechar{
+    .btn-fechar {
+        width: 56px;
+        height: 56px;
+        background: none;
         position: absolute;
         right: 10px;
         top: 10px;
-        width: 40px;
-        height: 40px;
-        background: #404040;
         border: 1px solid #404040;
         color: #fff;
-        font-size: 18px;
+        font-size: 12px;
+        color: #000;
         transition: all .2s ease-in-out;
 
-        &:hover{
-            @include media-breakpoint-up(lg){
+        &:hover {
+            @include media-breakpoint-up(lg) {
                 background: none;
                 color: #404040;
             }
