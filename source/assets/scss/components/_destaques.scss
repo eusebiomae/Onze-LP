@@ -31,8 +31,33 @@
                     figure {
                         width: 100%;
 
-                        @include media-breakpoint-down(md) {
+                        @include media-breakpoint-down(lg) {
                             background: #fff;
+
+                            p {
+                                color: #a56135;
+                                margin-left: 5px;
+                            }
+                        }
+
+                    }
+
+                    figure:hover {
+                        width: 100%;
+                        background: #fff;
+                        transition: all 0.6s;
+
+                        p {
+                            color: #a56135;
+                            margin-left: 5px;
+                        }
+
+                        .icone-yasbek {
+                            width: 21.12px;
+                            height: 21.29px;
+                            position: absolute;
+                            bottom: 31px;
+                            right: 15px;
                         }
                     }
 
@@ -48,10 +73,6 @@
                         position: absolute;
                         bottom: 31px;
                         right: 15px;
-
-                        @include media-breakpoint-up(lg) {
-                            display: none
-                        }
                     }
                 }
             }
@@ -71,10 +92,10 @@
         line-height: 42px;
 
         @include media-breakpoint-down (md) {
-            color: #a56135;
             margin-left: 24px;
         }
     }
+
 
     hr {
         border: 1px solid #fff;

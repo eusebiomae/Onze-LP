@@ -10,25 +10,40 @@
     height: 977px;
 
     &-intro {
-        text-align: center;
+        text-align: start;
         padding-bottom: 20px;
 
+        @include media-breakpoint-up(lg) {
+            text-align: center;
+            padding-bottom: 20px;
+        }
+
         h1 {
-            font-size: 32px;
+            font-size: 30px;
             font-weight: 400;
-            line-height: 41.02px;
+            line-height: 38.46px;
             color: #a56135;
             text-transform: uppercase;
             margin-top: 35px;
+
+            @include media-breakpoint-up(lg) {
+                font-size: 32px;
+                line-height: 41.02px;
+            }
         }
 
         p {
             font-size: 18px;
-            font-weight: 400;
-            line-height: 23.08px;
+            font-weight: 500;
+            line-height: 35.08px;
             color: #a56135;
             margin-top: 24px;
             margin-bottom: 10px;
+
+            @include media-breakpoint-up(lg) {
+                font-weight: 400;
+                line-height: 23.08px;
+            }
         }
 
         span {

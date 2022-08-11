@@ -8,7 +8,7 @@
                 <hr class="linha1">
 
                 <h3 class="modal-contato-tit">
-                    Envie um e-mail
+                    Fale com a nossa equipe
                 </h3>
 
                 <hr class="linha2">
@@ -17,15 +17,17 @@
                 <span></span>
             </div>
 
-            <%
-            form_nome = 'formModalEmail';
-            form_prefixo = 'FME';
-            form_tipo = 'Email';
-            form_canal = 'mensagem';
-            form_btn = 'Enviar';
-            %>
-
-            <% include form %>
+            <div class="form">
+                <%
+                form_nome = 'formModalEmail';
+                form_prefixo = 'FME';
+                form_tipo = 'Email';
+                form_canal = 'mensagem';
+                form_btn = 'Enviar';
+                %>
+    
+                <% include form %>
+            </div>
 
         </div>
     </div>

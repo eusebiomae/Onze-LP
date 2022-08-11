@@ -28,7 +28,7 @@
             <div class="invalid-feedback">Digite um e-mail válido.</div>
         </div>
         <div class="form-group">
-            <label for="<%= form_prefixo %>_Tel" class="form-label">E um telefone para contato? <% if(form_email) { %><span>(opcional)</span><%}%></label>
+            <label for="<%= form_prefixo %>_Tel" class="form-label">E um telefone para contato? <% if(form_email) { %><span></span><%}%></label>
             <input type="tel" name="Telefone" id="<%= form_prefixo %>_Tel" class="form-control" pattern=".{14,15}" maxlength="15" data-mask="tel" <% if(!form_email) { %>required<%}%> >
             <div class="invalid-feedback">Digite um telefone válido.</div>
         </div>
