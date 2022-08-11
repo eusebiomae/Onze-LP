@@ -4,6 +4,8 @@ import PhotoSwipe from 'photoswipe';
 import PhotoSwipeUI_Default from 'photoswipe/dist/photoswipe-ui-default.js';
 import Splide from '@splidejs/splide';
 
+require('bootstrap/js/dist/modal');
+
 // variables
 const ismobile = window.innerWidth <= 768;
 const isdesktop = window.innerWidth >= 768;

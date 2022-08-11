@@ -2,6 +2,7 @@
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
 @import "bootstrap/scss/mixins";
+@import "bootstrap/scss/modal";
 $container-max-widths_lp: (xl: $container-max-width);
 $container-max-widths: map-merge($container-max-widths, $container-max-widths_lp);
 $container-max-widths: map-remove($container-max-widths, xxl);

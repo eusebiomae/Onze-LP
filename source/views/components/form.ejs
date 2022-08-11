@@ -42,11 +42,17 @@
         <% } %>
 
         <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="Aceito" name="Termo_Consentimento" id="defaultCheck1" required>
+            <input class="form-check-input" type="checkbox" value="Aceito" name="Termo_Consentimento" id="defaultCheck1"
+                required />
             <label class="form-check-label" for="defaultCheck1">
-                Concordo com o <a href="#" class="text-secondary" data-bs-toggle="modal" data-bs-target="#politicaModal">Termo de Consentimento</a> para utilização de dados pessoais.
+                Concordo com o
+                <a href="#" class="text-secondary" data-bs-toggle="modal" data-bs-target="#politicaModal">Termo de
+                Consentimento</a> 
+                para utilização de dados pessoais e em receber comunicados de acordo com meus interesses.
             </label>
-            <div class="invalid-feedback">Leia e aceite o Termo de Consentimento.</div>
+            <div class="invalid-feedback">
+                Leia e aceite o Termo de Consentimento.
+            </div>
         </div>
         
         <button type="submit" class="btn-form"><%= form_btn %></button>
