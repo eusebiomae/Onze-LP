@@ -94,10 +94,6 @@
             visibility: hidden;
             transition: all .3s ease-in-out;
             transform: translate(10px);
-
-            // @include media-breakpoint-down(lg){
-            //     display: none;
-            // }
         }
 
         &:hover {
