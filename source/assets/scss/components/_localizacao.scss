@@ -161,6 +161,10 @@
                 .item {
                     width: 270px;
 
+                    @include media-breakpoint-up(lg) {
+                        width: 270px;
+                    } 
+
                     figure {
                         width: 100%;
                     }
